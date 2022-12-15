@@ -34,6 +34,7 @@ router.delete("/:id", (req, res) => {
     console.log(req.params);
 
     const { id } = req.params;
+    // How .filter() works ?  => If returned true, it keeps that value in the array, else deletes it
     users = users.filter((user) => user.id != id);
     res.send(`User with Id :- ${id}, has been deleted from the database`);
 })
